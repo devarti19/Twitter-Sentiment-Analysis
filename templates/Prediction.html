@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Twitter API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+
+</head>
+
+<body>
+
+ <div class="Predict">
+	<h1>Twitter Sentiment Analysis</h1>
+    <ol>
+    {%for i in range(0, len) %}
+   		<li>{{tweet[i] + '-- ' + classify[i]}}</li>
+
+
+    {%endfor%}
+    </ol>
+ </div>
+ <div style="background-image:url(static/images/sentiment-analysis-demo.png);">
+ <div class="row" >
+     <div class="column">
+         <img src={{ url1 }} alt="Bar" style="width:100%"/>
+     </div>
+     <div class="column">
+         <img src={{ url2 }} alt="StackedBar" style="width:100%"/>
+     </div>
+ </div></div>
+
+
+
+</body>
+</html>

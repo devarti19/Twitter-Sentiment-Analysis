@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Twitter API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: Black;
+}
+
+.bottom-centre {
+  position: absolute;
+  bottom: 100px;
+  right: 280px;
+  transform: translate(-50%, -50%);
+}
+
+.bottom {
+  position: absolute;
+  top: 200px;
+  left: 1px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <img src="static/images/sentiment.jpeg" alt="Sentiment" style="width:100%;">
+  <div class="centered" ></div>
+</div>
+ <div class="bottom-centre" >
+	<h1>Twitter Sentiment Analysis</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="experience" placeholder="Enter a Hashtag" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict and Show</button>
+    </form>
+
+   <br>
+   <br>
+     <div class="bottom" ><b>Enter the hashtag to see the top 10 tweets in twitter with their sentiments.</b></div>
+
+ </div>
+
+
+</body>
+</html>
