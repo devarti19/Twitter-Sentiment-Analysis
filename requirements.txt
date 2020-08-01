@@ -11,5 +11,5 @@ matplotlib>=1.4.3
 pandas>=0.19
 seaborn
 tweepy
-nltk==3.3
+nltk
 textblob
